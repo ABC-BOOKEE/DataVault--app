@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.linear-gradient {
+  background: linear-gradient(
+    179.14deg,
+    rgba(32, 18, 63, 0) -7.14%,
+    #000000 87.01%
+  );
+}
+
+.main-bg{
+   background-color: #13131a ;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0.8);
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] sm:text-6xl;
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.orange_bg_gradient {
+  @apply bg-gradient-to-r from-orange-600 to-yellow-500;
+}
+
+.pink_gradient {
+  @apply bg-gradient-to-r from-fuchsia-800 to-pink-700 bg-clip-text text-transparent;
+}
+
+.pink_bg_gradient {
+  @apply bg-gradient-to-r from-fuchsia-800 to-pink-700;
+}
+
+.blue_bg_gradient {
+  @apply bg-gradient-to-r from-blue-500 to-cyan-500 ;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-white sm:text-xl text-center max-w-3xl;
+}
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+
