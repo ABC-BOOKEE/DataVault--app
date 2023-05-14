@@ -1,15 +1,43 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React from "react";
+import ItemsContainer from "./ItemsContainer";
+// import SocialIcons from "./SocialIcons";
+// import { Icons } from "./Menus";
 
 const Footer = () => {
   return (
-    <footer className="main-bg rounded-lg">
-    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <hr className="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
-        <span className="block text-sm text-white sm:text-center">© 2023 SyncVault All Rights Reserved.</span>
-    </div>
-</footer>
-  )
-}
+    <footer className="bg-black text-white mx-auto p-4 md:py-8">
+      <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-7">
+        <h1 className="'lg:text-4xl border-white text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5">
+          <span className="text-teal-400">Free </span>
+          Untill You are Ready to Launch
+        </h1>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter Your Email"
+            className="text-gray-900
+           sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2 focus:outline-none"
+          />
+          <button
+            className="bg-teal-400 hover:bg-teal-500 duration-300 px-5 py-2.5 font-[Poppins]
+           rounded-md text-white md:w-auto w-full"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+      <ItemsContainer />
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
+      text-center pt-2 text-gray-400 text-sm pb-8"
+      >
+        <span>© 2023 SyncVault. All rights reserved.</span>
+        <span>Terms · Privacy Policy</span>
+        {/* <SocialIcons Icons={Icons} /> */}
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
