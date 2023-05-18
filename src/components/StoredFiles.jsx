@@ -45,7 +45,7 @@ const StoredFiles = () => {
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 31337) {
+    if (chainId !== 3141) {
       window.alert("Change the network to hyperspace tesnet");
       throw new Error("Change network to hyperspace testnet");
     }
@@ -65,99 +65,6 @@ const StoredFiles = () => {
     console.log(files);
     setFile(files);
   };
-
-  const elements = [
-    {
-      position: 6,
-      mass: 230000,
-      symbol: "Temeke",
-      name: "Marvelous Medicines Arusha",
-    },
-    {
-      position: 7,
-      mass: 120000,
-      symbol: "Natron",
-      name: "Panacea Prescriptions ",
-    },
-    {
-      position: 39,
-      mass: 6070000,
-      symbol: "Yombo dovya",
-      name: "Hale & Health Pharmacy",
-    },
-    {
-      position: 56,
-      mass: 5870000,
-      symbol: "Tabata",
-      name: "Ailments & Antidotes",
-    },
-    {
-      position: 58,
-      mass: 3270000,
-      symbol: "Central",
-      name: "QuickUp Prescriptions",
-    },
-    {
-      position: 6,
-      mass: 230000,
-      symbol: "Temeke",
-      name: "Marvelous Medicines Arusha",
-    },
-    {
-      position: 7,
-      mass: 120000,
-      symbol: "Natron",
-      name: "Panacea Prescriptions ",
-    },
-    {
-      position: 39,
-      mass: 6070000,
-      symbol: "Yombo dovya",
-      name: "Hale & Health Pharmacy",
-    },
-    {
-      position: 56,
-      mass: 5870000,
-      symbol: "Tabata",
-      name: "Ailments & Antidotes",
-    },
-    {
-      position: 58,
-      mass: 3270000,
-      symbol: "Central",
-      name: "QuickUp Prescriptions",
-    },
-    {
-      position: 6,
-      mass: 230000,
-      symbol: "Temeke",
-      name: "Marvelous Medicines Arusha",
-    },
-    {
-      position: 7,
-      mass: 120000,
-      symbol: "Natron",
-      name: "Panacea Prescriptions ",
-    },
-    {
-      position: 39,
-      mass: 6070000,
-      symbol: "Yombo dovya",
-      name: "Hale & Health Pharmacy",
-    },
-    {
-      position: 56,
-      mass: 5870000,
-      symbol: "Tabata",
-      name: "Ailments & Antidotes",
-    },
-    {
-      position: 58,
-      mass: 3270000,
-      symbol: "Central",
-      name: "QuickUp Prescriptions",
-    },
-  ];
 
   const rows = files.map((element) => (
     <tr key={element.name}>

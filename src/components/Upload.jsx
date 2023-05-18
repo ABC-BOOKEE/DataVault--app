@@ -58,7 +58,7 @@ const Upload = () => {
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 31337) {
+    if (chainId !== 3141) {
       window.alert("Change the network to hyperspace tesnet");
       throw new Error("Change network to hyperspace testnet");
     }
