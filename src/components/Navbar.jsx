@@ -1,5 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
-import { logo } from "../assets";
+import { altLogo } from "../assets";
 import { Text } from "@mantine/core";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router";
@@ -7,7 +8,7 @@ const Navbar = () => {
   return (
     <header className="w-full flex justify-center items-center flex-col">
       <nav className="flex justify-between items-center w-full mb-10 pt-3">
-        <img src={logo} alt="sumz_logo" className="w-20 h-20  object-contain" />
+        <img src={altLogo} alt="SyncVault_logo" className="w-40 h-20  object-contain" />
 
         <Box display="flex" justifyContent="space-between">
           
