@@ -15,7 +15,7 @@ const Pricing = () => {
           and reliable customer support.
         </p>
       </div>
-      <div className="grid grid-cols-3 text-white gap-8 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="grid lg:grid-cols-3 text-white gap-12 lg:gap-8 py-12 px-4 sm:px-6 lg:px-8">
         {Plans.map((plan) => (
           <div
             key={plan.title}
