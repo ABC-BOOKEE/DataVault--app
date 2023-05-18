@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import FileCard from './FileCard'
 import { Table, Button } from '@mantine/core'
@@ -39,8 +40,9 @@ const StoredFiles = () => {
     
     <div className='flex flex-row ' >
     <FileCard owner='Mbunji Mohamed' title='Lecture 2' description='Lecture 2 assignment'/>
-    <FileCard owner='Mbunji Mohamed' title='Lecture 2' description='Lecture 2 assignment'/>
-    <FileCard owner='Mbunji Mohamed' title='Lecture 2' description='Lecture 2 assignment'/>
+    <FileCard owner='Julius MARENGA' title='Lecture 2' description='Lecture 2 assignment'/>
+    <FileCard owner='GABRIEL DEE' title='Lecture 2' description='Lecture 2 assignment'/>
+    {/* <FileCard owner='Mbunji Mohamed' title='Lecture 2' description='Lecture 2 assignment'/> */}
     </div>
 
     <h3 className='font-epilogue ml-3 my-3 font-bold sm:text-[20px] text-[16px] leading-[38px] text-white'>All files</h3>
