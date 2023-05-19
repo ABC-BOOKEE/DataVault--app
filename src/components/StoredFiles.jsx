@@ -58,12 +58,18 @@ const StoredFiles = () => {
   };
 
   const retrieve = async () => {
+    let foundFiles = [];
     const signer = await getProviderOrSigner(true);
     console.log(await signer.getAddress());
     const contract = new Contract(CONTRACTADDRESS, ABI, signer);
     const files = await contract.getDocuments(await signer.getAddress());
-    console.log(files);
-    setFile(files);
+    let addr = await signer.getAddress();
+    files.forEach((element) => {
+      if (element.sender == addr) {
+        foundFiles.push(element);
+      }
+    });
+    setFile(foundFiles);
   };
 
   const rows = files.map((element) => (
