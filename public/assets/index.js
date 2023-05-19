@@ -1,6 +1,7 @@
 import createCampaign from './create-campaign.svg';
 import dashboard from './dashboard.svg';
 import logo from './logo.svg';
+import altLogo from './altLogo.png';
 import logout from './logout.svg';
 import payment from './payment.svg';
 import profile from './profile.svg';
@@ -18,6 +19,7 @@ export {
   createCampaign,
   dashboard,
   logo,
+  altLogo,
   logout,
   payment,
   profile,
