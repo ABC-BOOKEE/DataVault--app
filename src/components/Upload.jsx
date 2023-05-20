@@ -14,6 +14,7 @@ import { ABI, CONTRACTADDRESS } from "../../constant";
 import Web3Modal from "web3modal";
 import { Web3Storage } from "web3.storage";
 import { Button } from "@mui/material";
+import { Reload } from "@web3uikit/icons";
 
 const Upload = () => {
   const fileTypes = ["JPG", "PNG", "GIF"];
@@ -21,6 +22,8 @@ const Upload = () => {
   const theme = useMantineTheme();
   const [isLoading, setIsLoading] = useState(false);
   const [walletConnected, setWalletConnected] = useState(false);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [file, setFile] = useState(null);
 
@@ -71,19 +74,28 @@ const Upload = () => {
   };
 
   const handleChange = async () => {
-    const signer = await getProviderOrSigner(true);
-    console.log(file[0].name);
-    let time = new Date();
-    time = time.getDate() + "/" + time.getMonth() + "/" + time.getFullYear();
-    let fileName = file[0].name;
-    let fileSize = file[0].size.toString();
-    console.log(fileSize);
-    console.log(time.toString());
-    let cid = await client.put(file);
+    setIsSubmitting(true);
 
-    const contract = new Contract(CONTRACTADDRESS, ABI, signer);
-    const res = await contract.store(cid, time, fileName, fileSize);
-    res.wait();
+    try {
+      const signer = await getProviderOrSigner(true);
+      console.log(file[0].name);
+      let time = new Date();
+      time = time.getDate() + "/" + time.getMonth() + "/" + time.getFullYear();
+      let fileName = file[0].name;
+      let fileSize = file[0].size.toString();
+      console.log(fileSize);
+      console.log(time.toString());
+      let cid = await client.put(file);
+
+      const contract = new Contract(CONTRACTADDRESS, ABI, signer);
+      const res = await contract.store(cid, time, fileName, fileSize);
+      await res.wait();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+      // we can refresh the page
+    }
   };
 
   return (
@@ -152,13 +164,32 @@ const Upload = () => {
                 </Dropzone.Reject>
 
                 <div className="">
-                  <Text size="xl" color="white" inline>
-                    Drag & Drop files here or click to select files
-                  </Text>
-                  <Text size="sm" color="dimmed" inline mt={7}>
-                    Attach as many files as you like, each file should not
-                    exceed 5mb
-                  </Text>
+                {file ? (
+
+                  <div>
+                    <Text size="xl" color="white" inline>
+                      Files uploaded
+                      
+                    </Text>
+                    <Text size="sm" color="dimmed" inline mt={7}>
+                      Attach as many files as you like, each file should not exceed 5mb
+                    </Text>
+                  </div>
+
+                  
+                ) : (
+
+                  <div>
+                    <Text size="xl" color="white" inline>
+                      Drag & Drop files here or click to select files
+                    </Text>
+                    <Text size="sm" color="dimmed" inline mt={7}>
+                      Attach as many files as you like, each file should not exceed 5mb
+                    </Text>
+                  </div>
+                  
+                )}
+                
                 </div>
               </Group>
             </Dropzone>
@@ -170,9 +201,18 @@ const Upload = () => {
               title="Submit to store in Web3"
               styles="orange_bg_gradient"
             > */}
-            <Button onClick={handleChange}> Submit to the store</Button>
             {/* </CustomButton> */}
-          </div>
+           
+            <button
+            onClick={handleChange}
+            className="font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[15px] orange_bg_gradient"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Sending" : "Submit to the store"}
+          </button>
+            
+            
+            </div>
         </div>
       </div>
     </div>
