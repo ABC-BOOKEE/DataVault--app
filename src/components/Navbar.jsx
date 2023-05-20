@@ -100,33 +100,36 @@ const Navbar = () => {
               color: "white",
             }}
             onClick={() => {
-              navigate("/dashboard");
+              navigate("/");
             }}
           >
-            About us
+            Home
           </button>
+
+          
 
           <button
             className="text-white px-3 mx-3"
-            style={{
-              color: "white",
-            }}
-          >
-            {renderButton()}
-          </button>
-
-          <button
-            className="blue_bg_gradient rounded-full py-2 px-4"
             type="button"
             onClick={() =>
               window.open(
-                "https://github.com/Team-clear/pharmacySupplyChainManagementSystem",
+                "https://github.com/ABC-BOOKEE/SyncVault",
                 "_blank"
               )
             }
           >
             GitHub
           </button>
+
+          <button
+            className="blue_bg_gradient rounded-full py-2 px-4"
+            style={{
+              color: "black",
+            }}
+          >
+            {renderButton()}
+          </button>
+          
         </Box>
       </nav>
     </header>

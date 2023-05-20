@@ -27,7 +27,7 @@ const Dashnav = () => {
           title={true ? 'Upload Files' : 'Login'}
           styles={true ? 'pink_bg_gradient' : 'blue_bg_gradient'}
           handleClick={() => {
-            if (true) navigate('create-campaign')
+            if (true) navigate('/dashboard/upload')
             else 'connect()'
           }}
         />
