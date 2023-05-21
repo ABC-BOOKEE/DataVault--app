@@ -16,12 +16,18 @@
     "@mantine/dropzone": "^6.0.10",
     "@mantine/hooks": "^6.0.10",
     "@mui/material": "^5.12.3",
-    "@tabler/icons-react": "^2.18.0",
+    "@tabler/icons-react": "^2.19.0",
+    "@typechain/ethers-v5": "^10.2.1",
+    "@web3uikit/core": "^1.0.4",
+    "@web3uikit/icons": "^1.0.2",
+    "@web3uikit/web3": "^0.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-drag-drop-files": "^2.3.10",
     "react-router": "^6.11.1",
-    "react-router-dom": "^6.11.1"
+    "react-router-dom": "^6.11.1",
+    "web3.storage": "^4.5.4",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
