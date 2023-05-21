@@ -1,3 +1,5 @@
+/* eslint-disable no-constant-condition */
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import CustomButton from './CustomButton';
@@ -24,10 +26,14 @@ const Dashnav = () => {
       <div className="sm:flex hidden flex-row justify-end gap-4">
         <CustomButton
           btnType="button"
+          // eslint-disable-next-line no-constant-condition
           title={true ? 'Upload Files' : 'Login'}
+          // eslint-disable-next-line no-constant-condition
           styles={true ? 'pink_bg_gradient' : 'blue_bg_gradient'}
           handleClick={() => {
+
             if (true) navigate('/dashboard/upload')
+ 
             else 'connect()'
           }}
         />

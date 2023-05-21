@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import FeatureBlock from "../components/ControlDataSection";
 import ShareFiles from "../components/ShareFiles"
+import Pricing from "../components/Pricing"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Hero />
         <FeatureBlock />
         <ShareFiles />
+        <Pricing />
       </div>
       <Footer />
     </div>

@@ -1,3 +1,4 @@
+ 
 import React, { useEffect, useState, useRef } from "react";
 import FileCard from "./FileCard";
 import { Table, Button, ActionIcon } from "@mantine/core";
@@ -6,6 +7,11 @@ import { ABI, CONTRACTADDRESS } from "../../constant";
 import Web3Modal from "web3modal";
 import { Web3Storage } from "web3.storage";
 import { IconDatabase, IconTrash, IconDownload,IconDotsVertical } from '@tabler/icons-react';
+ 
+import React from 'react'
+import FileCard from './FileCard'
+import { Table, Button } from '@mantine/core'
+ 
 
 const StoredFiles = () => {
   const [files, setFile] = useState([]);
@@ -111,9 +117,12 @@ const StoredFiles = () => {
 
   return (
     <div>
+ 
       <h3 className="font-epilogue ml-3 my-3 font-bold sm:text-[20px] text-[16px] leading-[38px] text-white">
         Recent files
       </h3>
+ 
+    
 
       <div className="flex flex-row ">
         {recentFiles}

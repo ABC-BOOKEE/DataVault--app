@@ -1,5 +1,10 @@
+ 
 import { logo } from "../assets";
 import { Contract, ethers, providers } from "ethers";
+ 
+import React from "react";
+import { altLogo } from "../assets";
+ 
 import { Text } from "@mantine/core";
 import { Box, Typography, Button } from "@mui/material";
 import Web3Modal from "web3modal";
@@ -91,7 +96,7 @@ const Navbar = () => {
   return (
     <header className="w-full flex justify-center items-center flex-col">
       <nav className="flex justify-between items-center w-full mb-10 pt-3">
-        <img src={logo} alt="sumz_logo" className="w-20 h-20  object-contain" />
+        <img src={altLogo} alt="SyncVault_logo" className="w-40 h-20  object-contain" />
 
         <Box display="flex" justifyContent="space-between">
           <button

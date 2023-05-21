@@ -1,11 +1,13 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 
 import Dashnav from '../components/Dashnav';
 import Sidebar from '../components/Sidebar';
 import StoredFiles from '../components/StoredFiles';
 import Upload from '../components/Upload';
+import Home from './Home';
 
 const Dashboard = () => {
   return (
@@ -19,6 +21,7 @@ const Dashboard = () => {
         <Routes>
             <Route path='/' element={<StoredFiles/>} />
             <Route path='/dashboard/upload' element={<Upload/>} />
+            <Route path='/dashboard/home' element={<Home/>} />
         </Routes>
         
       </div>
