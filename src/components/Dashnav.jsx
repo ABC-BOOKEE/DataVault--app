@@ -31,9 +31,8 @@ const Dashnav = () => {
           // eslint-disable-next-line no-constant-condition
           styles={true ? 'pink_bg_gradient' : 'blue_bg_gradient'}
           handleClick={() => {
-
-            if (true) navigate('/dashboard/upload')
- 
+            // eslint-disable-next-line no-constant-condition
+            if (true) navigate('create-campaign')
             else 'connect()'
           }}
         />
@@ -88,7 +87,7 @@ const Dashnav = () => {
               title={true ? 'Upload Files' : 'Login'}
               styles={true ? 'pink_bg_gradient' : 'blue_bg_gradient'}
               handleClick={() => {
-                if (true) navigate('/dashboard/upload')
+                if (true) navigate('create-campaign')
                 else 'connect();'
               }}
             />
