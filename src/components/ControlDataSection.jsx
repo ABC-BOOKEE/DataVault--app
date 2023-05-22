@@ -30,7 +30,7 @@ const FeatureBlock = () => {
             data is scrambled so that it cannot be read by anyone who does not
             have the encryption key, And lastly via transparency, you can see
             who is storing your data and where it is stored. If you are looking
-            a for a more secure and private way to store your data, SyncVault is
+            a for a more secure and private way to store your data, Data Vault is
             a great option.
           </p>
           <a
