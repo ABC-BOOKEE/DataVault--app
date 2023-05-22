@@ -11,7 +11,7 @@ const ShareFiles = () => {
           </h3>
           <p className="blurb text-white text-lg mb-6">
             Easily share your files and folders with friends and colleagues on
-            SyncVault, share even to people without SyncVault accounts. And the
+            Data Vault, share even to people without Data Vault accounts. And the
             good thing is that even when sharing, you are still in control of
             your data. You can give people read-only or full access to your
             folders, and can set a password or create expiring links.
