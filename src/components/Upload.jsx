@@ -164,32 +164,27 @@ const Upload = () => {
                 </Dropzone.Reject>
 
                 <div className="">
-                {file ? (
-
-                  <div>
-                    <Text size="xl" color="white" inline>
-                      Files uploaded
-                      
-                    </Text>
-                    <Text size="sm" color="dimmed" inline mt={7}>
-                      Attach as many files as you like, each file should not exceed 5mb
-                    </Text>
-                  </div>
-
-                  
-                ) : (
-
-                  <div>
-                    <Text size="xl" color="white" inline>
-                      Drag & Drop files here or click to select files
-                    </Text>
-                    <Text size="sm" color="dimmed" inline mt={7}>
-                      Attach as many files as you like, each file should not exceed 5mb
-                    </Text>
-                  </div>
-                  
-                )}
-                
+                  {file ? (
+                    <div>
+                      <Text size="xl" color="white" inline>
+                        Files uploaded
+                      </Text>
+                      <Text size="sm" color="dimmed" inline mt={7}>
+                        Attach as many files as you like, each file should not
+                        exceed 5mb
+                      </Text>
+                    </div>
+                  ) : (
+                    <div>
+                      <Text size="xl" color="white" inline>
+                        Drag & Drop files here or click to select files
+                      </Text>
+                      <Text size="sm" color="dimmed" inline mt={7}>
+                        Attach as many files as you like, each file should not
+                        exceed 5mb
+                      </Text>
+                    </div>
+                  )}
                 </div>
               </Group>
             </Dropzone>
@@ -202,17 +197,15 @@ const Upload = () => {
               styles="orange_bg_gradient"
             > */}
             {/* </CustomButton> */}
-           
+
             <button
-            onClick={handleChange}
-            className="font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[15px] orange_bg_gradient"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Sending" : "Submit to the store"}
-          </button>
-            
-            
-            </div>
+              onClick={handleChange}
+              className="font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[15px] orange_bg_gradient"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending" : "Submit to the store"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
