@@ -92,7 +92,7 @@ const StoredFiles = () => {
       <FileCard
         key={element.name}
         cid={element.cidValue}
-        owner={element.owner}
+        owner={element.sender}
         fileName={element.docName}
         size={element.size ? element.size : "0 KB"}
         uploadedon={element.time ? element.time : "unknown"}

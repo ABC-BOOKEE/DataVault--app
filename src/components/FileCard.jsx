@@ -67,7 +67,7 @@ const FileCard = ({
             />
           </div>
           <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">
-            by <span className="text-[#b2b3bd]">{owner}</span>
+            By <span className="text-[#5e6ca8] ps-5 h-4">{owner}</span>
           </p>
         </div>
       </div>
